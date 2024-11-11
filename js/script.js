@@ -1,6 +1,5 @@
 import peliculas from './peliculas.js'
 
-console.log(peliculas)
 
 const accion = []
 const thriller = []
@@ -14,49 +13,39 @@ peliculas.forEach(pelicula => {
     });
 });
 
-console.log(accion)
-console.log(thriller)
-console.log(aventura)
 
 // ACCION
 
-const divAccion = document.querySelectorAll("#genero-28")
+const divAccion = document.getElementById("genero-28")
 
-divAccion.forEach(div => {
+console.log(divAccion)
 
-    accion.forEach(pelicula => {
-      div.innerHTML += `<div class="peli">
+accion.forEach(pelicula => {
+      divAccion.innerHTML += `<div class="peli">
         <img src="https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt="${pelicula.original_title}">
         <h3>${pelicula.original_title}</h3>
       </div>`;
     });
-  });
 
 // THRILLER
 
-  const divThriller = document.querySelectorAll("#genero-53")
+  const divThriller = document.getElementById("genero-53")
 
-divThriller.forEach(div => {
-    
     thriller.forEach(pelicula => {
-      div.innerHTML += `<div class="peli">
+      divThriller.innerHTML += `<div class="peli">
         <img src="https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt="${pelicula.original_title}">
         <h3>${pelicula.original_title}</h3>
       </div>`;
     });
-  });
 
 // AVENTURA
 
 
-  const divAventura = document.querySelectorAll("#genero-12")
-
-divAventura.forEach(div => {
-    
+  const divAventura = document.getElementById("genero-12")
+   
     aventura.forEach(pelicula => {
-      div.innerHTML += `<div class="peli">
+      divAventura.innerHTML += `<div class="peli">
         <img src="https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt="${pelicula.original_title}">
         <h3>${pelicula.original_title}</h3>
       </div>`;
     });
-  });
